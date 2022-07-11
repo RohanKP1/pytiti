@@ -22,11 +22,11 @@ class Gstructure():
 
           coordinates are given as:
 
-     (7)    |    (8)    |    (9)    
-_____________________________________
-     (4)    |    (5)    |    (6)
-_____________________________________
-     (1)    |    (2)    |    (3)
+     (7)    │    (8)    │    (9)    
+────────────┼───────────┼────────────
+     (4)    │    (5)    │    (6)
+────────────┼───────────┼────────────
+     (1)    │    (2)    │    (3)
 
 > How to put coordinates correctly:
           Enter your number (1-9) : {self.styled_text("1",Gstructure.YELLOW,Gstructure.BOLD)}
@@ -91,12 +91,18 @@ _____________________________________
             for col in range (0,ran):
                 for row in range (0,ran):
                     if row!=2:
-                        pole="\t|"
+                        pole="\t│"
                     else:
                         pole=""    
                     print("\t"+map[col][row]+pole,end="")
                 if col!=2: 
-                    print("\n"+"_"*50)
+                    print("")
+                    for _ in range(0,47):
+                        if(_%16==0 and _!=0):
+                            print("┼",end="")
+                        else:
+                            print("─",end="")
+                    print("")                
         except IndexError:
             print(self.styled_text("Index out of Range!",Gstructure.RED,Gstructure.BOLD))
         
