@@ -1,4 +1,4 @@
-# Pytiti
+## Pytiti - CLI based Tic Tac Toe Game
 
 <img src="https://i.postimg.cc/L4JN8BYZ/imgonline-com-ua-twotoone-HESp3-Qf-Jk-Zz2-Hp.png)" width=50% height=50%>
 
