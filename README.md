@@ -1,6 +1,8 @@
 ## Pytiti - CLI based Tic Tac Toe Game
 
-<img src="https://i.postimg.cc/L4JN8BYZ/imgonline-com-ua-twotoone-HESp3-Qf-Jk-Zz2-Hp.png)" width=50% height=50%>
+<img src="https://i.postimg.cc/52zfBQ67/Screenshot-2022-07-11-065802.png" width=50% height=50%>
+
+<img src="https://i.postimg.cc/4xXT92Rd/Screenshot-2022-07-11-145243.png" width=50% height=50%>
 
 ------
 
