@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 from os import system, name
 import sys
 import time
