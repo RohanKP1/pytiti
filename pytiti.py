@@ -22,18 +22,17 @@ class Gstructure():
 
           coordinates are given as:
 
-     (0,0)    |    (0,1)    |    (0,2)    
-__________________________________________
-     (1,0)    |    (1,1)    |    (1,2)
-__________________________________________
-     (2,0)    |    (2,1)    |    (2,2)
+     (1)    |    (2)    |    (3)    
+_____________________________________
+     (4)    |    (5)    |    (6)
+_____________________________________
+     (7)    |    (8)    |    (9)
 
 > How to put coordinates correctly:
-          Enter coordinates (x,y) : {self.styled_text("1,1",Gstructure.YELLOW,Gstructure.BOLD)}
+          Enter your number (1-9) : {self.styled_text("1",Gstructure.YELLOW,Gstructure.BOLD)}
 
 > Enter {self.styled_text("Ctrl+C",Gstructure.YELLOW,Gstructure.BOLD)} to exit the game anytime.            
             """)
-
 
         elif "-p" or "" in self.check_argument():     
             choice = ["O","X"]
@@ -50,22 +49,31 @@ __________________________________________
                     index = 0
                     print(self.styled_text("\t\t    O\'s turn\n",Gstructure.BLUE))    
                 self.print_game(Gstructure.GAME_MAP, len(Gstructure.GAME_MAP))
+
+                match int(input("\n\nEnter your number (1-9) : ")):
+                    case 1: x,y = 0,0
+                    case 2: x,y = 0,1
+                    case 3: x,y = 0,2
+                    case 4: x,y = 1,0
+                    case 5: x,y = 1,1
+                    case 6: x,y = 1,2
+                    case 7: x,y = 2,0
+                    case 8: x,y = 2,1
+                    case 9: x,y = 2,2
+                    case other: x,y = 3,3
+                        
                 try:
-                    x,y = map(int, input("\n\nEnter coordinates (x,y) : ").split(","))
                     if Gstructure.GAME_MAP[x][y] == "":
                         self.update_chance(x,y,choice[index])
-                    else:
-                        print(self.styled_text("\nThe coordinate is already occupied!",Gstructure.RED,Gstructure.BOLD))
+                    elif Gstructure.GAME_MAP[x][y] == "O" or "X":
+                        print(self.styled_text("\n\t     Index already occupied!",Gstructure.RED,Gstructure.BOLD))
                         time.sleep(2)
-                        turn -= 1
+                        turn -= 1    
                 except IndexError:
-                        print(self.styled_text("\n\t\tIndex out of Range!",Gstructure.RED,Gstructure.BOLD))
-                        time.sleep(2)
-                        turn -= 1
-                except ValueError:
-                        print(self.styled_text("\nEnter the coordinates in specified format! i.e. (x,y)",Gstructure.RED,Gstructure.BOLD)) 
-                        time.sleep(2)
-                        turn -= 1         
+                    print(self.styled_text("\n\t\tIndex out of Range!",Gstructure.RED,Gstructure.BOLD))
+                    time.sleep(2)
+                    turn -= 1    
+
             self.clear()
             print(self.styled_text("\t\t   Tik Tak Toe\n" ,Gstructure.YELLOW ,Gstructure.BOLD))      
             self.print_game(Gstructure.GAME_MAP, len(Gstructure.GAME_MAP)) 
@@ -100,7 +108,6 @@ __________________________________________
             pass                   
 
     def check_win(self, choice : str) -> list:
-
         super_list = Gstructure.GAME_MAP[0] + Gstructure.GAME_MAP[1] + Gstructure.GAME_MAP[2]
         while "" in super_list:
             for col in range (3):
