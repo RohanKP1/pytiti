@@ -99,7 +99,7 @@ class Gstructure():
                     print("\t"+map[col][row]+pole,end="")
                 if col!=2: 
                     print("")
-                    for _ in range(0,47):
+                    for _ in range(0,48):
                         if(_%16==0 and _!=0):
                             print("┼",end="")
                         else:
