@@ -6,7 +6,7 @@
 
 ------
 
-A simple Tic Tac Toe Game, made entirely in Python with TUI (Terminal User Interface) in mind.
+A simple Tic Tac Toe Game, made entirely in Python with subtle TUI (Terminal User Interface).
 
 ------
 
