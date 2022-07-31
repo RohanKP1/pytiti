@@ -49,18 +49,18 @@ class Gstructure():
                     index = 0
                     print(self.styled_text("\t\t    O\'s turn\n",Gstructure.BLUE))    
                 self.print_game(Gstructure.GAME_MAP, len(Gstructure.GAME_MAP))
-
-                match int(input("\n\nEnter your number (1-9) : ")):
-                    case 7: x,y = 0,0
-                    case 8: x,y = 0,1
-                    case 9: x,y = 0,2
-                    case 4: x,y = 1,0
-                    case 5: x,y = 1,1
-                    case 6: x,y = 1,2
-                    case 1: x,y = 2,0
-                    case 2: x,y = 2,1
-                    case 3: x,y = 2,2
-                    case other: x,y = 3,3
+                
+                T = int(input("\n\nEnter your number (1-9) : "))
+                if  T == 7: x,y = 0,0
+                elif T == 8: x,y = 0,1
+                elif T == 9: x,y = 0,2
+                elif T == 4: x,y = 1,0
+                elif T == 5: x,y = 1,1
+                elif T == 6: x,y = 1,2
+                elif T == 1: x,y = 2,0
+                elif T == 2: x,y = 2,1
+                elif T == 3: x,y = 2,2
+                else: x,y = 3,3
                         
                 try:
                     if Gstructure.GAME_MAP[x][y] == "":
