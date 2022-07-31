@@ -1,4 +1,4 @@
-## Pytiti - CLI based Tic Tac Toe Game
+## Pytiti - TUI based Tic Tac Toe Game
 
 [![Screenshot-2022-07-11-163956.png](https://i.postimg.cc/YS2x0f5c/Screenshot-2022-07-11-163956.png)](https://postimg.cc/BjyFwDZN)
 
@@ -6,7 +6,7 @@
 
 ------
 
-A simple Tic Tac Toe Game, made entirely in Python with CLI in mind.
+A simple Tic Tac Toe Game, made entirely in Python with TUI (Terminal User Interface) in mind.
 
 ------
 
