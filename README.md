@@ -43,8 +43,5 @@ pytiti -h
 ```shell
 pytiti
 ```
-or
-```shell
-pytiti -p
-```
+
 -----
